@@ -1,15 +1,11 @@
 package com.javaspringexpert.dscatalog.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.Objects;
 
-@Table (name = "category")
+@Table (name = "tb_category")
 @Entity
 public class Category {
 

@@ -32,7 +32,7 @@ public class ProductResource {
         return ResponseEntity.ok().body(dto);
     }
 
-    @PostMapping
+    @PostMapping(value = "/{id}")
     public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
         dto = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")

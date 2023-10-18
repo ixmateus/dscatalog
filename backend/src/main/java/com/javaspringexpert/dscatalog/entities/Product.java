@@ -1,9 +1,6 @@
 package com.javaspringexpert.dscatalog.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;

@@ -1,7 +1,6 @@
 package com.javaspringexpert.dscatalog.resources;
 
 import com.javaspringexpert.dscatalog.dto.CategoryDTO;
-import com.javaspringexpert.dscatalog.entities.Category;
 import com.javaspringexpert.dscatalog.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -9,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import java.net.URI;
 import java.util.List;
 
@@ -32,7 +30,7 @@ public class CategoryResource {
         return ResponseEntity.ok().body(dto);
     }
 
-    @PostMapping
+    @PostMapping(value = "/{id}")
     public ResponseEntity<CategoryDTO> insert(@RequestBody CategoryDTO dto) {
         dto = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
